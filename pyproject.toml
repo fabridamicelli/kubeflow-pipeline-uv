@@ -1,0 +1,29 @@
+[project]
+name = "pipeline"
+version = "0.1.0"
+description = "An ML pipeline"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "docker>=7.1.0",
+    "kfp >= 2.13.0",
+]
+
+[dependency-groups]
+dev = [
+    "graphviz>=0.21",
+    "ipdb>=0.13.13",
+    "pyyaml>=6.0.2",
+]
+download_dataset = [
+    "scikit-learn>=1.7.1",
+]
+train = [
+    "scikit-learn>=1.7.1",
+]
+plot_confusion_matrix = [
+    "matplotlib>=3.10.5",
+    "scikit-learn>=1.7.1",
+    "seaborn>=0.13.2",
+]
+

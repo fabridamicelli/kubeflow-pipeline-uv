@@ -2,11 +2,6 @@ from kfp import dsl
 
 from component import custom_component
 
-# @dsl.component(
-#     base_image="python:3.12",
-#     packages_to_install=["scikit-learn"],
-# )
-
 
 @custom_component
 def train(

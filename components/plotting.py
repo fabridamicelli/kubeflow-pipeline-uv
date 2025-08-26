@@ -3,12 +3,6 @@ from kfp import dsl
 from component import custom_component
 
 
-# @dsl.component(
-#     base_image="python:3.12",
-#     packages_to_install=["scikit-learn", "matplotlib", "seaborn"],
-# )
-
-
 @custom_component
 def plot_confusion_matrix(
     predictions: dsl.Input[dsl.Artifact],

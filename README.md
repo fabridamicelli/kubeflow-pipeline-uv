@@ -14,7 +14,6 @@ This simplifies component development and management by centralizing dependency 
 
 Make sure you have `uv` installed and available in your system.
 
-The `pipeline.py` script is the main entry point for running the data processing pipeline.
 To run the pipeline, navigate to the project's root directory and run `pipeline.py`.
 
 Using `uv`:
@@ -27,4 +26,21 @@ Activating virtual environment manually:
 source .venv/bin/activate
 python pipeline.py
 ```
+
+Per default the script will run this simple pipeline:
+
+<p align="center">
+  <img src="./images/simple-pipeline.png" width="200" height="320" >
+</p>
+
+
+That will:
+ - Run locally using a [`DockerRunner`](https://www.kubeflow.org/docs/components/pipelines/user-guides/core-functions/execute-kfp-pipelines-locally/#runner-types)
+ - Write the outputs to the local folder `local_outputs`
+
+At the end you should see under `/local_outputs/pipelie-<timestampt>/plot-confusion-matrix/confusion_plot.png` a plot like this:
+
+<p align="center">
+  <img src="./images/confusion_plot.png" width="500" height="300" >
+</p>
 
